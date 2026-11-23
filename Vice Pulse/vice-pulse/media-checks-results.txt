@@ -1,0 +1,8 @@
+test_missing_audio_is_rejected (__main__.ExportChecks.test_missing_audio_is_rejected) ... ok
+test_ranges_only_plan_and_actual_export (__main__.ExportChecks.test_ranges_only_plan_and_actual_export) ... ok
+test_silent_source_is_rejected (__main__.ExportChecks.test_silent_source_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.017s
+
+OK

@@ -1,0 +1,12 @@
+test_ambiguous_response_survives_restart (__main__.Pipeline.test_ambiguous_response_survives_restart) ... ok
+test_exhausted_source_is_not_reused (__main__.Pipeline.test_exhausted_source_is_not_reused) ... ok
+test_expired_campaign_and_native_disclosure (__main__.Pipeline.test_expired_campaign_and_native_disclosure) ... ok
+test_live_receipts_are_distinct_from_rewards (__main__.Pipeline.test_live_receipts_are_distinct_from_rewards) ... ok
+test_pilot_renders_one_slot_with_campaign_call_to_action (__main__.Pipeline.test_pilot_renders_one_slot_with_campaign_call_to_action) ... ok
+test_rights_change_and_tampering (__main__.Pipeline.test_rights_change_and_tampering) ... ok
+test_two_clips_six_drafts_repeat_without_duplicates (__main__.Pipeline.test_two_clips_six_drafts_repeat_without_duplicates) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.022s
+
+OK

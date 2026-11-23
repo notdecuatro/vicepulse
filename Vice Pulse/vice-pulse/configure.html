@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; form-action 'self'; base-uri 'none'">
+<title>Configurar Vice Pulse en este Mac</title>
+<style>body{font:18px system-ui;max-width:700px;margin:60px auto;padding:24px;background:#10131d;color:#f2f4fa}label{display:block;margin-top:28px}input{box-sizing:border-box;width:100%;padding:14px;font:inherit;margin:10px 0;background:#202639;color:white;border:1px solid #8590b5;border-radius:7px}button,a{display:inline-block;font:inherit;padding:14px 20px;margin-top:24px;background:#8055ee;color:white;border:0;border-radius:8px}p{line-height:1.6}.note{color:#b7c4df}[hidden]{display:none}</style>
+<h1>Conectar Vice Pulse en este Mac</h1>
+<p>Este formulario guarda las claves en el proyecto de este Mac, sin enviarlas a servicios externos. Deja Cloudinary vacío si solo vas a conectar Buffer.</p>
+<label for="buffer">Clave existente de Buffer</label><input id="buffer" type="password" autocomplete="off" spellcheck="false">
+<label for="cloud">Cloudinary URL</label><input id="cloud" type="password" autocomplete="off" spellcheck="false" placeholder="cloudinary://…">
+<button id="prepare">Guardar conexión en este Mac</button>
+<p id="status" class="note"></p>
+<p class="note">La configuración se guarda con permisos 0600 y el servicio se cierra después del guardado.</p>
+<script>
+document.getElementById('prepare').onclick=async()=>{
+ const buffer=document.getElementById('buffer').value.trim();
+ const cloud=document.getElementById('cloud').value.trim();
+ if(!buffer&&!cloud){document.getElementById('status').textContent='Introduce al menos una credencial.';return;}
+ if(cloud&&!/^cloudinary:\/\/[^:]+:[^@]+@[^/]+\/?$/.test(cloud)){document.getElementById('status').textContent='Revisa el formato de Cloudinary URL.';return;}
+ const config={};if(buffer)config.BUFFER_API_KEY=buffer;if(cloud)config.CLOUDINARY_URL=cloud;
+ try{
+  if(location.protocol==='file:'){
+   if(!window.showSaveFilePicker){document.getElementById('status').textContent='Este navegador requiere el servicio local de configuración.';return;}
+   const handle=await window.showSaveFilePicker({suggestedName:'credentials.json',types:[{description:'Configuración privada de Vice Pulse',accept:{'application/json':['.json']}}]});
+   let current={};try{const text=await(await handle.getFile()).text();if(text.trim())current=JSON.parse(text);}catch{throw new Error('No se pudo leer la configuración existente.');}
+   const writable=await handle.createWritable();await writable.write(JSON.stringify({...current,...config},null,2)+'\n');await writable.close();
+   document.getElementById('status').textContent='Conexión guardada en este Mac. Puedes cerrar esta pestaña.';
+   document.getElementById('buffer').value='';document.getElementById('cloud').value='';document.getElementById('prepare').disabled=true;return;
+  }
+  if(location.protocol!=='http:'||location.hostname!=='127.0.0.1')throw new Error('Origen no admitido.');
+  const response=await fetch('/save',{method:'POST',headers:{'Content-Type':'application/json','X-Vice-CSRF':'__VICE_CSRF__'},body:JSON.stringify(config)});
+  const result=await response.json();document.getElementById('status').textContent=result.message;
+  if(response.ok){document.getElementById('buffer').value='';document.getElementById('cloud').value='';document.getElementById('prepare').disabled=true;}
+ }catch{document.getElementById('status').textContent='No se pudo completar el guardado.';}
+};
+</script></html>

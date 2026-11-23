@@ -1,0 +1,38 @@
+{
+  "campaign_url": "https://contentrewards.com/c/campaigns/f583b069-ced7-49e5-9ed3-2d3a13d6df0c",
+  "verified_on": "2026-11-22",
+  "accepting_clips": true,
+  "remaining_budget": 847,
+  "brief": "https://app.notion.com/p/Bobby-Van-Riper-GTA-VI-Clipping-Requirements-Guide-414582c82d8881d5b28bdd4235a1be82",
+  "language": "en",
+  "highlight_guidance": "Prefer a self-contained funny moment or first reaction from Bobby's GTA VI content in Miami. Look for a clear opening in the first two seconds. Avoid generic openings, invented context, and segments with no clear payoff.",
+  "disclosure": "Ad · Bobby Van Riper clipping campaign",
+  "caption_suffix": "Follow Bobby Van Riper on Twitch: twitch.tv/bobby_vanriper #bobbyvanriper #gta6",
+  "call_to_action": "Follow Bobby Van Riper on Twitch",
+  "logo_required": false,
+  "logo": "",
+  "joined": true,
+  "submission_session_ready": false,
+  "preapproval_required": false,
+  "platforms": {
+    "tiktok": {
+      "channel_id": "6b029a1a8541f09ecb6060ca",
+      "authorized": true,
+      "native_disclosure_supported": false
+    },
+    "instagram": {
+      "channel_id": "6b0299bd8541f09ecb605df0",
+      "authorized": false,
+      "native_disclosure_supported": false,
+      "pause_reason": "Cuenta desactivada temporalmente por actividad sospechosa; Diego informó que ya presentó apelación. Pendiente de resolución.",
+      "resume_requires": "Confirmar recuperación de la cuenta y revisar su estado antes de reactivar."
+    },
+    "youtube": {
+      "channel_id": "6b0299ef8541f09ecb605f64",
+      "authorized": true,
+      "native_disclosure_supported": false
+    }
+  },
+  "sources": [],
+  "submission_blocker": "Clip limit reached shown by Content Rewards. Reset period unknown."
+}

@@ -1,0 +1,47 @@
+{
+  "campaign_url": "https://contentrewards.com/c/campaigns/686f6547-172e-4b76-99be-c26eabd5a2cf",
+  "verified_on": "",
+  "accepting_clips": false,
+  "remaining_budget": 0,
+  "brief": "Use the current joined brief and the four official reference files. Logo bottom-right throughout. Keep posts live 60 days. Confirm rights and native ad disclosure.",
+  "disclosure": "Ad · GTA Clipper",
+  "caption_suffix": "GTA Clipper: gtaclipper.com #gta6 #gtaclipper #clipping",
+  "logo_required": true,
+  "logo": "assets/official-logo.png",
+  "joined": false,
+  "submission_session_ready": false,
+  "preapproval_required": null,
+  "platforms": {
+    "tiktok": {
+      "channel_id": "",
+      "authorized": false,
+      "native_disclosure_supported": false
+    },
+    "instagram": {
+      "channel_id": "",
+      "authorized": false,
+      "native_disclosure_supported": false
+    },
+    "youtube": {
+      "channel_id": "",
+      "authorized": false,
+      "native_disclosure_supported": false
+    }
+  },
+  "sources": [
+    {
+      "file": "assets/authorized-source.mp4",
+      "sha256": "",
+      "evidence_file": "",
+      "campaign_url": "https://contentrewards.com/c/campaigns/686f6547-172e-4b76-99be-c26eabd5a2cf",
+      "rights": {
+        "footage": false,
+        "game_ip": false,
+        "audio": false,
+        "commercial_edit": false,
+        "crosspost": false
+      },
+      "platforms": []
+    }
+  ]
+}

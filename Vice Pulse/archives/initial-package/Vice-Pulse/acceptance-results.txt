@@ -1,0 +1,17 @@
+test_ambiguous_response_survives_restart (__main__.Pipeline) ... ok
+test_exhausted_source_is_not_reused (__main__.Pipeline) ... ok
+test_expired_campaign_and_native_disclosure (__main__.Pipeline) ... ok
+test_live_receipts_are_distinct_from_rewards (__main__.Pipeline) ... ok
+test_rights_change_and_tampering (__main__.Pipeline) ... ok
+test_two_clips_six_drafts_repeat_without_duplicates (__main__.Pipeline) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.033s
+
+OK
+demo/demo-1.mov duration 18.000 tracks video=1 audio=1
+samples=108 bytes=4251575 size=720x1280
+samples=144000 bytes=288000 size=0x0
+demo/demo-2.mov duration 18.000 tracks video=1 audio=1
+samples=108 bytes=4507966 size=720x1280
+samples=144000 bytes=288000 size=0x0

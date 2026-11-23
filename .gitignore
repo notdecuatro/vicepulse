@@ -1,0 +1,15 @@
+__pycache__/
+*.zip
+*.mov
+*.mp4
+*.wav
+*.mp3
+credentials.json
+.env
+checkpoints/
+edits/
+state/
+pilot/
+campaigns/
+demo/
+assets/

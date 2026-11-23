@@ -1,0 +1,49 @@
+{
+  "mode": "campaign_led_clipping",
+  "budget_usd": 0,
+  "daily_distinct_concepts": 2,
+  "max_active_campaigns": 2,
+  "trial_started_on": "2026-11-22",
+  "trial_days": 14,
+  "primary_candidate": "dylan",
+  "status": "source_and_integrations_pending",
+  "decision_page": "https://chatgpt.com/space/page_9ca93dab00d08191bd9715adde6a2bf1",
+  "selection_gates": [
+    "full_brief_read",
+    "creator_eligible",
+    "joined",
+    "accepting_clips",
+    "submission_session_ready",
+    "source_available",
+    "commercial_rights_verified",
+    "platforms_verified"
+  ],
+  "operating_priorities": [
+    "reconcile_existing_posts",
+    "verify_submission_capacity",
+    "verify_source_and_brief",
+    "quality_and_editorial_review",
+    "publish_and_submit_within_30_minutes",
+    "record_approval_and_cash"
+  ],
+  "recheck_after_days": [
+    7,
+    14
+  ],
+  "metrics": [
+    "eligible_views",
+    "average_view_duration",
+    "viewed_vs_swiped",
+    "retention",
+    "approval_status",
+    "earned_usd",
+    "received_usd",
+    "operator_minutes",
+    "render_minutes"
+  ],
+  "campaign_order": [
+    "dylan",
+    "bobby",
+    "cnpl"
+  ]
+}
